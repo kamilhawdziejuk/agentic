@@ -28,9 +28,21 @@ This file serves as a persistent memory log across agent sessions to track repos
    - Strict approval requirement before any `git commit` or `git push`.
    - Branch format for Jira integration: `<type>/<TICKET-ID>/<description>`.
 
+## 🧰 Skill Search & Installation (Skills CLI & skills.sh)
+
+1. **Searching for New Skills**:
+   - Use `npx skills find [query]` to search for skills by keyword in the open agent skills ecosystem.
+   - Filter by GitHub owner: `npx skills find [query] --owner <owner>`
+
+2. **Installing Skills via `skills.sh`**:
+   - Run the workspace script: `./skills.sh <skill-package-or-url>`
+   - Direct CLI command: `npx skills add <package>` (or `npx skills install <package> --dir .agents/skills`)
+   - Updating installed skills: `npx skills update`
+
 ---
 
 ## 🧠 Key Learnings & Known Gotchas
 
 - *Skill Naming*: Must use `SKILL.md` (not `.mdc`) for Antigravity discovery.
 - *Testing Requirements*: Tests must be executed using project test tools before claiming task completion.
+
